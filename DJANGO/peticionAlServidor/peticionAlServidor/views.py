@@ -28,3 +28,6 @@ def retornaFecha(request):
             """% fecha_actual
     return HttpResponse(cadena)
 
+
+#urlfriendly -> para envio de parametros por la web
+
