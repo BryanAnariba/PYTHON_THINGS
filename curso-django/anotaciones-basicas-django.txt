@@ -1,0 +1,15 @@
+Crear una aplicacion python con django
+    -> django-admin startproject nombre_proyecto
+
+Estructura basica
+    manage.py -> contiene toda la informacion, comandos a utlizar migraciones, ejecuciones del server etc, es necesario ejecutarlo
+    conceptos_basicos/__init__.py -> aqui iran inicializaciones, cumple la mision de paquete ya que recae el control de los demas archivos aqui
+    conceptos_basicos/urls.py -> aqui van los endpoints
+    conceptos_basicos/settings.py -> contiene informacion/configuraciones del proyecto dependencias instaladas, conexiones a x base de datos Etc
+    conceptos_basicos/wsgi.py -> se encarga de la ejecucion del servidor en python ya que no es como php , python debe correrce
+
+Como ejecutar un proyecto ->
+    Primero ejecutar las migraciones
+        python manage.py migrate
+    Segundo ejecutar el servidor de python
+        python manage.py runserver
