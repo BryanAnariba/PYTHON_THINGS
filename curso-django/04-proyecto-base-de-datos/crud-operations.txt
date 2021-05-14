@@ -1,0 +1,23 @@
+Primero insertaremos por consola para lo cual se hara uso de cmd -> python.manage.py shell
+Trabajar en una sola tabla por cmd -> from gestion_pedidos.models import Article 
+
+from gestion_pedidos.models import Article 
+
+GET 
+    rows = Article.objects.all()    
+POST
+
+    Insertar con opcion larga
+    cocaCola = Article(articleName="Coca cola", articleSection="Frescos", articlePrice=14.99)
+    cocaCola.save()
+
+    Insertar con opcion corta
+    condones = Article.objects.create(articleName="Preservativos el Duro",articleSection="Sexo", articlePrice=12.99)
+
+PUT 
+    condones.articleSection = "Sexual"
+    condones.save()
+
+DELETE
+    article = Article.objects.get(id=2)
+    article.delete()

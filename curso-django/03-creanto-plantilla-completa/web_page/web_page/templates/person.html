@@ -1,0 +1,39 @@
+{% extends "template-principal.html" %}
+{%block title%} Persons {%endblock%}
+
+{%block content%}
+    {%if nombrePersona == 'Bryan Ariel' %}
+        <h3>You're an Admin</h3>
+    {%else%}
+        <h3>You're not an Admin</h3>
+    {%endif%}
+    <p>
+        Instructor Name: {{ nombrePersona.upper }}        
+    </p>
+    <P>
+        Instructor Last Name: {{ apellidoPersona.upper }} 
+    </P>
+    <p>
+        Date Actual: {{ fechaHoraActual.day }}
+    </p>
+    <p>
+        <strong>Hobbies:</strong>
+        <ul>
+                {%for hobby in hobbies%}
+                    <li>{{ hobby }}</li>
+                {%endfor%}
+        </ul>
+    </p>
+    <p>
+        <strong>Projects in programming languages:</strong>
+        <ul>
+            {%if projects%}
+                {%for project in projects%}
+                    <li>{{ project }}</li>
+                {%endfor%}
+            {%else%}
+                <li style="color:red" >Not projects created...</li>
+            {%endif%}
+        </ul>
+    </p>
+{%endblock%}

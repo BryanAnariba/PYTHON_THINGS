@@ -1,0 +1,18 @@
+Este proyecto de django tienda_online tiene 3 aplicaciones
+
+    para crear una aplicacion es con -> python manage.py startapp nombre_aplicacion
+                                        python manage.py startapp gestion_pedidos   
+
+    1: Crear el modulo
+        python manage.py startapp gestion_pedidos
+    2: Crear los modelos referentes al modulo, dichos modelos se ponen en models.py
+
+    3: Ejecutar las migraciones correspondientes, es diferente a laravel
+        Ejecutar migraciones
+            python manage.py makemigrations
+
+        Generar sql -> ojo con el lote, al Ejecutar la migracion te da un lote
+            python manage.py sqlmigrate gestion_pedidos 0001
+
+        Migrar
+            python manage.py migrate
