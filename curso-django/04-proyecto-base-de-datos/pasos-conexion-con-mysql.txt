@@ -1,0 +1,23 @@
+1: en cmd en el proyecto escribir
+        pip install pymysql
+
+2: Para importar el cliente en todo el proyecto, lo que haremos será abrir el documento MyProject/MyProject/__init__.py y escribir los siguiente:
+
+    import pymysql
+    pymysql.install_as_MySQLdb()
+
+3: Ir a settings.py en tienda_online en la parte de DATABASES y cambiar por 
+    DATABASES = {
+        'default': {
+                'ENGINE': 'django.db.backends.mysql',
+                'NAME': 'tienda-online',
+                'USER': 'root',
+                'PASSWORD': 'root',
+                'HOST': 'localhost',
+                'PORT': '3307',
+        }
+    }
+
+4: Ejecutar las migraciones a dicha base de datos
+    python manage.py makemigrations
+    python manage.py migrate

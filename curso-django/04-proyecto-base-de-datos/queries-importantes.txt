@@ -1,0 +1,17 @@
+Obtener los articulos donde la seccion del articulo sea de Limpieza
+    articles = Article.objects.filter(articleSection="Limpieza")
+
+Obtener los articulos donde la seccion sea Frescos y el Precio sea 14.99
+    articles = Article.objects.filter(articleSection="Frescos", articlePrice=14.99)
+
+Obtener los articulos donde la seccion sea Frescos y el Precio sea menor a 14.99
+    articles = Article.objects.filter(articleSection="Frescos", articlePrice__lte=14.99)
+
+Obtener los articulos donde la seccion sea Frescos y el Precio sea mayor a 14.99
+    articles = Article.objects.filter(articleSection="Frescos", articlePrice__gte=14.99)
+
+Obtener los articulos donde el precio sea mayor a 14.99 ordenado por precio
+    articles = Article.objects.filter(articlePrice__gte=14.99).order_by("articlePrice")
+
+Obtener los articulos donde el precio sea mayor a 14.99 ordenado por precio descendente
+    articles = Article.objects.filter(articlePrice__gte=14.99).order_by("-articlePrice")

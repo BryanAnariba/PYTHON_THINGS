@@ -12,6 +12,9 @@ class Article(models.Model):
     articleSection = models.CharField(max_length=40)
     articlePrice = models.DecimalField(max_digits=10, decimal_places=2)
 
+    def __str__(self):
+        return "articleName: {}, articleSection: {}, articlePrice: {}".format(self.articleName, self.articleSection, self.articlePrice)
+
 
 class Order(models.Model):
     orderNumber = models.IntegerField()

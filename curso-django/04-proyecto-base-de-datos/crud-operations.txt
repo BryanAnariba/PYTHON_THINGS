@@ -1,6 +1,9 @@
 Primero insertaremos por consola para lo cual se hara uso de cmd -> python.manage.py shell
 Trabajar en una sola tabla por cmd -> from gestion_pedidos.models import Article 
 
+base datos mysql CREATE SCHEMA `tienda-online` ;
+
+
 from gestion_pedidos.models import Article 
 
 GET 
