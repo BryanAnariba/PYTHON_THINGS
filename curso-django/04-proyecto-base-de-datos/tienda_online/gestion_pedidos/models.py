@@ -1,9 +1,9 @@
 from django.db import models
 
 class Client(models.Model):
-    firstName = models.CharField(max_length=60)
-    lastName = models.CharField(max_length=60)
-    address = models.CharField(max_length=150)
+    firstName = models.CharField(max_length=60, verbose_name="firstName")
+    lastName = models.CharField(max_length=60, verbose_name="lastName")
+    address = models.CharField(max_length=150, verbose_name="address")
     email = models.EmailField()
     phone = models.CharField(max_length=20)
 

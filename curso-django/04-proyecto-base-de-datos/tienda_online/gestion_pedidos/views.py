@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def searchProduct(request):
+    return render(request, "buscar-producto.html")

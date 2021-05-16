@@ -55,7 +55,9 @@ ROOT_URLCONF = 'tienda_online.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'C:/Users/Ariel Anariba/Documents/GitHub/practicas-python/curso-django/04-proyecto-bases-de-datos/tienda-online/tienda-online/templates/'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
